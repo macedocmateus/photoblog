@@ -41,12 +41,14 @@ body {
 }
 
 
-/* overflow-y serve para criar uma rolagem vertical somente no elemento elemento selecionado,
-preservando o posicionamento e visualização dos elementos externos no caso header e footer preservados */
+/* overflow-y serve para criar uma rolagem vertical somente no elemento elemento selecionado (main),
+preservando o posicionamento e visualização dos elementos externos no caso (header) e (footer) preservados */
 main {
   overflow-y: scroll;
   background-color: var(--color-base-gray-100);
 }
+
+
 
 header, nav, nav ul {
   display: flex;
@@ -97,6 +99,73 @@ ul li .active {
   height: 4.2rem;
   object-fit: cover;
   border-radius: 50%;
+}
+/* Galeria */
+main h1 {
+  font-size: 2.4rem;
+  padding-top: 1.6rem;
+}
+
+.gallery {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:2.2rem;
+}
+
+/* border-radius está colocando borda arrendondada nos cards porem não imagem não está aplicando,
+pois, a imagem está transbordando em relação ao card, é preciso que a imagem fique dentro da caixa
+utilizando overflow-hidden para escode-la */
+.item {
+  background-color: var(--color-base-white);
+  border-radius: .8rem;
+  overflow: hidden;
+}
+
+/* object-fit está cobrindo a imagem de acordo com proporção, sem o 
+object fit algumas imagens ficaram esticadas outras não */
+.item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  
+  /* transition-property: all;
+  transition-duration: 300ms;
+  transition-delay: 1s;
+  transition-timing-function: ease-out; */
+
+ transition: all 200ms ease-out;
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* foi usado z-index e position relative para que o hover da imagem não afetar o posicinamento do titulo da imagem e 
+a tag */
+.details {
+  padding: 2.2rem;
+  background-color: var(--color-base-white);
+  z-index: 1;
+  position: relative;
+}
+
+.details h2 {
+  font-size: 1.8rem;
+}
+
+.tags {
+  margin-top: 1.2rem;
+}
+
+.tags span {
+  padding: .6rem;
+  background-color: var(--color-base-gray-100);
+  border-radius: .4rem;
+  line-height: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 footer p {
