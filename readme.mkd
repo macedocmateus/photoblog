@@ -1,0 +1,40 @@
+<h1 align="center"> 📷 Fotoblog 📷</h1>
+
+<p align="center">
+Projeto pessoal utilizando conceitos de animações e filtros avançados.
+</p>
+
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;
+</p>
+
+<br>
+
+<p align="center">
+  <img alt="Imagens aleatórias" src="./assets/capa-readme.jpg" width="100%">
+</p>
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML e CSS
+- Git e Github
+- Figma
+
+## 💻 Projeto
+
+O Fotoblog é uma pagina de imagens aleatórias em que mudam de acordo com refresh da página. Clique <a href="https://photoblog-seven.vercel.app/" target="_blank">aqui</a> para testar a página.
+
+## 🎨 Layout
+
+Clique <a href="https://www.figma.com/file/syGLxfyz6ICO9cAYhYOdf6/Fotoblog-%E2%80%A2-Projeto-Explorer-(Community)?type=design&node-id=201-95&mode=design&t=mnO8LugVvT3jkE0m-0" target="_blank">aqui</a> para conhecer a prototipagem do projeto.
+<br>
+<br>
+<br>
+<br>
+<p align="center">
+Desenvolvido com ♥ by Mateus de Castro Macedo 👨‍💻
+</p>
