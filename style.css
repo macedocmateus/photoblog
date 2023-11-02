@@ -4,17 +4,22 @@
   box-sizing: border-box;
 }
 
+
+/* uso de variáveis -- para alteração de elementos, no caso do 
+padrão de cores hsl (cor, porcentagem de saturação, porcentagem de iluminação) */
+
 :root {
   font-size: 62.5%;
-
-  --color-base-white:#fff;
-  --color-base-gray-100:#f5f5f5;
-  --color-base-gray-300:#8d8d99;
-  --color-base-gray-500: #3d3d3d;
-  --color-base-gray-900:#202024;
+  
+  --hue:240;
+  --color-base-white:hsl(0, 0%, 100%);
+  --color-base-gray-100:hsl(0, 0%, 96%);
+  --color-base-gray-300:hsl(var(--hue), 60%, 58%);
+  --color-base-gray-500: hsl(0, 0%, 24%);
+  --color-base-gray-900:hsl(var(--hue), 60%, 20%);
 }
 
-html, budy, input {
+html, body, input, a {
   font-family: 'mulish',sans-serif;
   }
 
@@ -22,10 +27,6 @@ body {
   font-size: 1.6rem;
   background-color: var(--color-base-white);
   color: var(--color-base-gray-900);
-}
-
-#app > * {
-
 }
 
 #app {
@@ -60,14 +61,15 @@ header form {
   flex: 1;
 }
 
-nav ul {
+nav ul  {
   list-style: none;
   font-size: 1.8rem;
-  color: var(--color-base-gray-300);
   font-weight: 700;
+  color: var(--color-base-gray-300);
+  
 }
 
-ul li .active {
+nav ul .active  {
   color: var(--color-base-gray-900);
 }
 
@@ -134,7 +136,9 @@ object fit algumas imagens ficaram esticadas outras não */
   transition-delay: 1s;
   transition-timing-function: ease-out; */
 
- transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+
+  display: block;
 }
 
 .item img:hover {
@@ -171,4 +175,41 @@ a tag */
 footer p {
   text-align: center;
   padding: 1.6rem;
+}
+
+footer p span {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+header {
+  animation: move .2s;
+  --startY: -100%;
+}
+
+footer {
+  animation: move .2s;
+  --startY: 100%; 
+}
+
+.item {
+  --delay: .2s;
+  animation: appear .4s var(--delay) backwards;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
 }
